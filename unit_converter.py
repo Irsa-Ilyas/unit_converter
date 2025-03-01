@@ -47,16 +47,19 @@ def time_converter(value, from_unit, to_unit):
     time_units = {"second": 1, "minute": 1/60, "hour": 1/3600, "day": 1/86400, "week": 1/604800, "year": 1/31536000}
     return (value / time_units[from_unit]) * time_units[to_unit]
 
+
+  
+    
 if st.button("Convert"):
     if category == "Length":
         result = length_converter(value, from_unit, to_unit)
+    elif category == "Weight": 
+        result = weight_converter(value, from_unit, to_unit)
     elif category == "Temperature":
         result = temperature_converter(value, from_unit, to_unit)
     elif category == "Volume":
         result = volume_converter(value, from_unit, to_unit)
     elif category == "Time":
         result = time_converter(value, from_unit, to_unit)
-  
-    
+
     st.markdown(f"<h3>Converted Value: {result}</h3>", unsafe_allow_html=True)
-st.markdown("<p>Created by <span style='color:orange;font-weight:bolder'>IRSA ILYAS</span></p>", unsafe_allow_html=True)
