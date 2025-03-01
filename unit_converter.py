@@ -28,7 +28,9 @@ elif category == "Time":
 def length_converter(value, from_unit, to_unit):
     length_units = {"meter": 1, "kilometer": 0.001, "centimeter": 100, "millimeter": 1000, "mile": 0.000621371, "yard": 1.09361, "foot": 3.28084, "inch": 39.3701}
     return (value / length_units[from_unit]) * length_units[to_unit]
-
+def weight_converter(value, from_unit, to_unit):
+    weight_units = {"kilogram": 1, "gram": 1000, "milligram": 1000000, "pound": 2.20462, "ounce": 35.274}
+    return (value / weight_units[from_unit]) * weight_units[to_unit]
 def temperature_converter(value, from_unit, to_unit):
     if from_unit == to_unit:
         return value
