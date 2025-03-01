@@ -1,7 +1,6 @@
 
 import streamlit as st
-st.markdown("<h1 style='color:blue;text-align:center'>Code With Irsa 👩‍💻</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='color:blue; text-align:center; padding:10px;'>🔄 Professional Unit Converter 📏⚖️</h3>", unsafe_allow_html=True)
+st.markdown("<h1 style='color:orange; text-align:center; padding:10px;'>🔄 Professional Unit Converter</h1>", unsafe_allow_html=True)
 
 category = st.selectbox("Enter the Quantity ", ["Length", "Weight", "Temperature", "Volume", "Time"])
 value = st.number_input("Enter value:", min_value=0.00, step=0.01)
@@ -60,4 +59,4 @@ if st.button("Convert"):
   
     
     st.markdown(f"<h3>Converted Value: {result}</h3>", unsafe_allow_html=True)
-st.markdown("<p>Created by <span style='color:blue;font-weight:bolder'>IRSA ILYAS</span></p>", unsafe_allow_html=True)
+st.markdown("<p>Created by <span style='color:orange;font-weight:bolder'>IRSA ILYAS</span></p>", unsafe_allow_html=True)
